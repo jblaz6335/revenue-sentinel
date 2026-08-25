@@ -6,8 +6,8 @@
 - [x] Entrant is not otherwise ineligible under the official rules.
 - [x] Submit as an individual/hobbyist and sole developer.
 - [x] Confirm the entrant owns or is authorized to submit every project component.
-- [ ] Join the contest using the correct Devpost account.
-- [ ] Review and accept the binding official rules personally.
+- [x] Join the contest using the correct Devpost account (`jblaz6335`).
+- [x] Review and accept the binding official rules personally.
 
 ## Google Cloud - owner/account action
 
