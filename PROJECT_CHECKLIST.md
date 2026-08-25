@@ -1,0 +1,57 @@
+# Submission checklist
+
+## Eligibility and ownership - owner review
+
+- [x] Entrant is above the age of majority and resides outside excluded jurisdictions.
+- [x] Entrant is not otherwise ineligible under the official rules.
+- [x] Submit as an individual/hobbyist and sole developer.
+- [x] Confirm the entrant owns or is authorized to submit every project component.
+- [ ] Join the contest using the correct Devpost account.
+- [ ] Review and accept the binding official rules personally.
+
+## Google Cloud - owner/account action
+
+- [x] Use dedicated project `blaz-revenue-sentinel-2026` and confirm billing responsibility.
+- [x] Claim the USD 150 participant credit.
+- [x] Create the least-privilege `revenue-sentinel-runtime` service account.
+- [x] Enable a gross-spend budget and keep maximum instances at one.
+- [x] Deploy to Cloud Run.
+- [x] Verify active revision `revenue-sentinel-00002-t5j` and the `.run.app` endpoint.
+- [x] Verify one real ADK/Gemini 3.5 Flash invocation.
+- [x] Verify one matching Firestore audit record and Cloud log entry.
+
+## Public artifacts - owner/account action
+
+- [ ] Review the clean source archive.
+- [ ] Publish to GitHub or create an approved private repository and share it with the required judges.
+- [ ] Ensure spin-up instructions reproduce the current verified build.
+- [ ] Record an approximately four-minute demo.
+- [ ] Upload the video publicly or as permitted by final rules.
+- [ ] Add the verified repository, deployment, and video URLs to `SUBMISSION.md`.
+
+## Final technical verification
+
+- [ ] `uv sync --python 3.12 --extra dev`
+- [ ] `uv run pytest --cov=src/revenue_sentinel --cov=main --cov-report=term-missing`
+- [ ] `uv run ruff check .`
+- [ ] `uv run ruff format --check .`
+- [ ] `uv run revenue-sentinel fixtures/opportunities.json --pretty`
+- [ ] HTTP health, demo, dashboard, and API docs verified.
+- [ ] Docker build and container health verified where Docker is available.
+- [ ] Clean archive extraction passes the same checks.
+
+## Devpost submission
+
+- [ ] Category: Taskmaster.
+- [ ] Description covers features, technology, other data sources, findings, and learnings.
+- [ ] Architecture diagram attached.
+- [ ] Demo visibly proves the backend runs on Google Cloud.
+- [ ] All claims match `VERIFICATION.md`.
+- [ ] Submit before August 31, 2026 at 5:00 p.m. PT.
+- [ ] Save the final submission URL and confirmation evidence.
+
+## Optional bonus actions
+
+- [ ] Decide whether to publish a qualifying technical article.
+- [ ] Decide whether to publish a qualifying social post with `#AllThingsAgenticHackathon`.
+- [ ] Keep any optional public claim inside the verified boundary.

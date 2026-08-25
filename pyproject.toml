@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "revenue-sentinel"
+version = "0.1.0"
+description = "Autonomous evidence-first opportunity triage using Google ADK and Gemini."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "fastapi>=0.116,<1",
+  "google-adk>=1.18,<2",
+  "google-cloud-firestore>=2.21,<3",
+  "google-genai>=1.45,<2",
+  "pydantic>=2.11,<3",
+  "uvicorn[standard]>=0.35,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1",
+  "pytest>=8.4,<9",
+  "pytest-cov>=6.2,<7",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+revenue-sentinel = "revenue_sentinel.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/revenue_sentinel", "app"]
+
+[tool.pytest.ini_options]
+addopts = "-q --disable-warnings"
+testpaths = ["tests"]
+pythonpath = [".", "src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]

@@ -1,0 +1,81 @@
+[
+  {
+    "opportunity_id": "google-agentic-2026",
+    "title": "All Things Agentic Hackathon",
+    "source_url": "https://allthingsagentichackathon.devpost.com/",
+    "channel": "Hackathon",
+    "potential_value_usd": 50000,
+    "deadline_iso": "2026-09-01T00:00:00Z",
+    "eligible": null,
+    "buyer_verified": true,
+    "payment_protected": null,
+    "budget_clear": true,
+    "scope_clear": true,
+    "public_evidence": [
+      "https://allthingsagentichackathon.devpost.com/",
+      "https://allthingsagentichackathon.devpost.com/rules"
+    ],
+    "external_actions": ["join contest", "deploy to Google Cloud", "publish repository", "submit Devpost entry"],
+    "notes": "Eligibility and account ownership require owner confirmation before submission."
+  },
+  {
+    "opportunity_id": "closed-contract",
+    "title": "Expired automation contract",
+    "source_url": "https://example.com/jobs/expired",
+    "channel": "Contract",
+    "potential_value_usd": 4000,
+    "deadline_iso": "2026-08-01T00:00:00Z",
+    "eligible": true,
+    "buyer_verified": true,
+    "payment_protected": true,
+    "budget_clear": true,
+    "scope_clear": true,
+    "public_evidence": ["https://example.com/jobs/expired", "https://example.com/jobs/expired/rules"],
+    "external_actions": ["submit proposal"]
+  },
+  {
+    "opportunity_id": "dust-marketplace",
+    "title": "Sixteen dust-value agent tasks",
+    "source_url": "https://web3.okx.com/",
+    "channel": "Agent Marketplace",
+    "potential_value_usd": 0.00016,
+    "deadline_iso": null,
+    "eligible": true,
+    "buyer_verified": null,
+    "payment_protected": null,
+    "budget_clear": true,
+    "scope_clear": false,
+    "public_evidence": ["https://web3.okx.com/"],
+    "external_actions": ["monitor buyer event"]
+  },
+  {
+    "opportunity_id": "unverified-buyer",
+    "title": "High-budget integration with weak buyer evidence",
+    "source_url": "https://example.com/jobs/integration",
+    "channel": "Contract",
+    "potential_value_usd": 1500,
+    "deadline_iso": "2026-09-02T00:00:00Z",
+    "eligible": true,
+    "buyer_verified": false,
+    "payment_protected": false,
+    "budget_clear": true,
+    "scope_clear": false,
+    "public_evidence": ["https://example.com/jobs/integration"],
+    "external_actions": ["message buyer", "submit proposal"]
+  },
+  {
+    "opportunity_id": "unsafe-source",
+    "title": "Lead with no canonical HTTPS evidence",
+    "source_url": "http://invalid.test/job",
+    "channel": "Unknown",
+    "potential_value_usd": 9000,
+    "deadline_iso": "not-a-date",
+    "eligible": null,
+    "buyer_verified": null,
+    "payment_protected": null,
+    "budget_clear": false,
+    "scope_clear": false,
+    "public_evidence": [],
+    "external_actions": ["send funds"]
+  }
+]
