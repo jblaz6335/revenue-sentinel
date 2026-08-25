@@ -22,9 +22,9 @@
 
 ## Public artifacts - owner/account action
 
-- [ ] Review the clean source archive.
-- [ ] Publish to GitHub or create an approved private repository and share it with the required judges.
-- [ ] Ensure spin-up instructions reproduce the current verified build.
+- [x] Review the clean source archive.
+- [x] Publish the sanitized repository at `https://github.com/jblaz6335/revenue-sentinel`.
+- [x] Ensure spin-up instructions reproduce the current verified build.
 - [ ] Record an approximately four-minute demo.
 - [ ] Upload the video publicly or as permitted by final rules.
 - [ ] Add the verified repository, deployment, and video URLs to `SUBMISSION.md`.

@@ -2,10 +2,10 @@ $ErrorActionPreference = "Stop"
 
 $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $hackathonRoot = (Resolve-Path (Join-Path $projectRoot "..")).Path
-$stageRoot = Join-Path $hackathonRoot "package-staging-revenue-sentinel-final-20260825-v3"
+$stageRoot = Join-Path $hackathonRoot "package-staging-revenue-sentinel-final-20260825-v4"
 $stageProject = Join-Path $stageRoot "revenue-sentinel"
 $distRoot = Join-Path $hackathonRoot "dist"
-$archive = Join-Path $distRoot "revenue-sentinel-submission-source-v3.zip"
+$archive = Join-Path $distRoot "revenue-sentinel-submission-source-v4.zip"
 
 if (Test-Path -LiteralPath $stageRoot) { throw "Staging path already exists: $stageRoot" }
 if (Test-Path -LiteralPath $archive) { throw "Archive already exists: $archive" }

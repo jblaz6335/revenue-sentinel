@@ -22,9 +22,7 @@ https://revenue-sentinel-867717531848.us-central1.run.app
 
 ## Repository
 
-`[public GitHub repository URL]`
-
-Publish a sanitized repository from the verified source archive. If private, share it with the addresses required by the contest rules.
+https://github.com/jblaz6335/revenue-sentinel
 
 ## Inspiration
 
@@ -93,7 +91,7 @@ Autonomy becomes more useful when authority is explicit. Agents can do extensive
 
 ## Demo video
 
-`[public YouTube or Vimeo URL, about four minutes]`
+`[public YouTube or Vimeo URL, maximum four minutes]`
 
 The final video must visibly prove the Cloud Run backend, ADK/Gemini invocation, Firestore record, architecture, deterministic gate, and test result. Do not claim live cloud behavior before those artifacts exist.
 

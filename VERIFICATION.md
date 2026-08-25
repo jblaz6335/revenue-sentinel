@@ -59,5 +59,5 @@ The hackathon channel cap is 1%, producing USD 500 expected value on the USD 50,
 
 The following remain explicitly unverified and must not be claimed:
 
-- Devpost registration, contest entry, public repository, demo-video upload, or submission;
+- Devpost registration, contest entry, demo-video upload, or submission;
 - judging result, prize, user, customer, contract, sale, or revenue.
