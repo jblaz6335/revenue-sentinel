@@ -49,6 +49,15 @@ The hackathon channel cap is 1%, producing USD 500 expected value on the USD 50,
 
 `assets/architecture.png` was rendered from the source SVG and visually inspected at 3200×1800. All nodes, arrows, labels, boundaries, and the owner-gate footer are legible without clipping or overlap.
 
+## Public submission proof
+
+- Public demo video: `https://youtu.be/TSp3dc-k1Ys`.
+- Video length: 2 minutes 56 seconds at 1920×1080, constant 30 fps, H.264 video, and AAC audio.
+- Final video SHA-256: `7AA37B1F534EC3CA9C6D00973C9502DCC675D59C2F7B08D94B45229B51167478`.
+- Devpost project: `https://devpost.com/software/revenue-sentinel-25chxk`.
+- Devpost confirmed `Project submitted!` on 2026-08-25.
+- The public page was inspected after submission and contained the video embed, two gallery images, the live service, the public repository, and the complete solo-developer story.
+
 ## Environment findings
 
 - Google Cloud CLI is installed and authenticated to the project owner account.
@@ -59,5 +68,4 @@ The hackathon channel cap is 1%, producing USD 500 expected value on the USD 50,
 
 The following remain explicitly unverified and must not be claimed:
 
-- Devpost registration, contest entry, demo-video upload, or submission;
 - judging result, prize, user, customer, contract, sale, or revenue.

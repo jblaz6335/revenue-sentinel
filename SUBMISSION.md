@@ -1,4 +1,4 @@
-# Devpost submission draft
+# Devpost submission record
 
 ## Project name
 
@@ -91,13 +91,19 @@ Autonomy becomes more useful when authority is explicit. Agents can do extensive
 
 ## Demo video
 
-`[public YouTube or Vimeo URL, maximum four minutes]`
+https://youtu.be/TSp3dc-k1Ys
 
-The final video must visibly prove the Cloud Run backend, ADK/Gemini invocation, Firestore record, architecture, deterministic gate, and test result. Do not claim live cloud behavior before those artifacts exist.
+The public 2 minute 56 second video shows the live Cloud Run service, the five-case audit, a bounded Gemini 3.5 Flash tool call, Firestore persistence, the architecture, and the verified test result. The narration uses the same Kokoro `af_heart` voice stack as the prior accepted demo voice, at 1.03 speed with normalized loudness.
+
+## Devpost project
+
+https://devpost.com/software/revenue-sentinel-25chxk
+
+Submitted to the All Things Agentic Hackathon on August 25, 2026 as an individual, sole-developer entry in the Taskmaster category.
 
 ## Other data sources
 
-The included fixture uses public-source URLs and synthetic examples. It contains no buyer data, credentials, personal data, or customer records. The demo's current Google contest facts should be rechecked immediately before recording.
+The included fixture uses public-source URLs and synthetic examples. It contains no buyer data, credentials, personal data, or customer records. The contest facts were rechecked before the final recording.
 
 ## Findings and learnings
 
@@ -105,4 +111,4 @@ The most important finding is that a credible autonomous revenue agent needs a f
 
 ## Truth boundary
 
-The repository and live proof establish the deterministic engine, API, ADK definition, fixture, tests, architecture, active Cloud Run revision, successful Gemini 3.5 Flash tool invocation, Firestore persistence, and Cloud logging. They do not claim Devpost submission, customers, revenue, judging results, or a prize.
+The repository, live service, public video, and submitted Devpost page establish the deterministic engine, API, ADK definition, fixture, tests, architecture, active Cloud Run revision, successful Gemini 3.5 Flash tool invocation, Firestore persistence, Cloud logging, and contest submission. They do not claim customers, revenue, a judging result, or a prize.

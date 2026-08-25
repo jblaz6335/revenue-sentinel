@@ -1,35 +1,33 @@
-# Four-minute demo script
+# Revenue Sentinel demo script
 
-## 0:00-0:25 - The costly failure mode
+Target: 3 minutes 20 seconds to 3 minutes 45 seconds.
 
-“Revenue teams do not suffer from a lack of leads. They suffer from noisy leads: expired contracts, eligibility traps, unverified buyers, unclear budgets, and tiny tasks that cost more to inspect than they can ever pay. A normal chat agent can sound confident while skipping those gates.”
+Voice: Kokoro ONNX, `af_heart`, speed `1.03`, normalized to minus 16 LUFS.
 
-## 0:25-0:55 - Product
+## 1. The problem
 
-“Revenue Sentinel is an autonomous evidence gate built with Google ADK and Gemini 3.5 Flash. It turns opportunity data into a ranked, auditable action queue. Gemini handles orchestration and explanation; deterministic code owns facts that must not drift.”
+Most revenue tools try to find more leads. My problem was the opposite. I was losing time to expired posts, unknown eligibility, unverified buyers, vague budgets, and tiny tasks that cost more to inspect than they could ever pay. I built Revenue Sentinel as a solo developer to turn that noisy research into a clear, evidence-backed queue.
 
-## 0:55-1:40 - Live batch
+## 2. The workflow
 
-“This credential-free fixture contains five deliberately different cases. The current Google hackathon has verified rules and prize evidence, but eligibility is not yet confirmed, so it stays in review. A queue of sixteen agent tasks is worth only 0.00016 USDT, so it is tabled. An expired contract and an invalid source are rejected. A high-budget contract without payment protection stays under review.”
+Revenue Sentinel checks the source, deadline, eligibility, buyer, payment protection, budget, scope, and evidence before it recommends anything. Every opportunity becomes ready, review, table, or reject. Ready still requires owner approval for external action. Review means an important fact is missing. Table means the value is too small. Reject means a hard rule failed.
 
-“The system calculates bounded expected value, exposes every finding, and gives each result a SHA-256 evidence digest. It never calls a lead revenue.”
+## 3. Live execution
 
-## 1:40-2:20 - Agent action
+This is the deployed service running on Google Cloud. I am starting with the five-case audit. The fixture includes a current contest, an unverified contract, a queue worth only a fraction of a cent, an expired contract, and an invalid source. The result is two reviews, one table, and two rejects. Each result includes risk, bounded expected value, findings, a next step, and a SHA-256 evidence digest.
 
-“The ADK agent has two tools: audit an opportunity and create an evidence brief. It cannot send a message, submit a form, spend funds, sign, deploy, or modify an account. Opportunity text is treated as untrusted data.”
+## 4. Gemini with a hard boundary
 
-“If I ask Gemini what to pursue, it must call the audit first. Unknown eligibility cannot become ready. Closed or invalid opportunities cannot be promoted by persuasive language.”
+Now I am running the live Gemini agent. Google ADK gives Gemini 3.5 Flash two tools: audit an opportunity and create an evidence brief. The agent must call the deterministic audit before it can explain a decision. It has no tool for sending messages, spending funds, signing, submitting, or changing an account. In this run, the verified synthetic contract is ready, but the action gate still says owner approval.
 
-## 2:20-3:00 - Engineering proof
+## 5. Architecture and cloud proof
 
-“The FastAPI service validates every request and exposes single and batch audits plus a deterministic demo. The test suite covers hard gates, sorting, digests, tamper detection, API validation, and persistence behavior. Local JSONL records form a hash chain.”
+I separated the system into clear layers. FastAPI on Cloud Run accepts typed input. Google ADK and Gemini choose the approved tool. The Python policy engine owns the rules that must never drift. Firestore stores each audit by its evidence digest. The active Cloud Run revision is revenue-sentinel-00002-t5j with one hundred percent of traffic. The live agent request returned HTTP 200, and the matching Firestore document was saved.
 
-## 3:00-3:35 - Google Cloud proof
+## 6. Reproducibility
 
-“The service runs on Cloud Run. Vertex AI supplies Gemini, and Firestore stores digest-addressed audit results. Here is the active Cloud Run revision, the live endpoint, the matching log entry, and the Firestore document.”
+The public repository includes the architecture, deployment script, fixture, runbook, and exact setup steps. Forty-five automated tests pass with ninety-five percent combined coverage. Ruff lint and formatting checks pass. The public demo needs no login, and the deterministic five-case run needs no model key. Judges can open the live URL, run both proofs, inspect the API docs, and reproduce the project locally.
 
-The preceding paragraph is now verified against revision `revenue-sentinel-00002-t5j`, the live Gemini call, the matching Firestore record, and Cloud logs.
+## 7. Close
 
-## 3:35-3:55 - Value
-
-“Revenue Sentinel removes the repetitive work of filtering and documenting opportunities while preserving the moments that actually require human authority. It helps autonomous agents move faster without inventing certainty, permission, or revenue.”
+Revenue Sentinel does the repetitive work of checking, ranking, and documenting opportunities without pretending that a lead is revenue or that uncertainty is permission. I built it to move faster while keeping every important claim and action auditable. The live service and complete source are available at the links in this submission.
