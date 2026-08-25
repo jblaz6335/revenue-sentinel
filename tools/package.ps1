@@ -2,10 +2,10 @@ $ErrorActionPreference = "Stop"
 
 $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $hackathonRoot = (Resolve-Path (Join-Path $projectRoot "..")).Path
-$stageRoot = Join-Path $hackathonRoot "package-staging-revenue-sentinel-final-20260825-v5"
+$stageRoot = Join-Path $hackathonRoot "package-staging-revenue-sentinel-final-20260825-v6"
 $stageProject = Join-Path $stageRoot "revenue-sentinel"
 $distRoot = Join-Path $hackathonRoot "dist"
-$archive = Join-Path $distRoot "revenue-sentinel-submission-source-v5.zip"
+$archive = Join-Path $distRoot "revenue-sentinel-submission-source-v6.zip"
 
 if (Test-Path -LiteralPath $stageRoot) { throw "Staging path already exists: $stageRoot" }
 if (Test-Path -LiteralPath $archive) { throw "Archive already exists: $archive" }
@@ -15,6 +15,7 @@ $files = @(
   "Dockerfile", "LICENSE", "main.py", "PROJECT_CHECKLIST.md", "pyproject.toml", "README.md",
   "requirements.txt", "SECURITY.md", "SUBMISSION.md", "uv.lock", "VERIFICATION.md", "verify.ps1",
   "VIDEO_SCRIPT.md", "app/__init__.py", "app/agent.py", "app/runtime.py", "assets/architecture.png",
+  "assets/devpost-thumbnail-v1.png",
   "assets/architecture.svg", "fixtures/opportunities.json", "infra/deploy.ps1", "infra/service.yaml",
   "src/revenue_sentinel/__init__.py", "src/revenue_sentinel/cli.py", "src/revenue_sentinel/demo.py",
   "src/revenue_sentinel/engine.py", "src/revenue_sentinel/firestore_ledger.py",
