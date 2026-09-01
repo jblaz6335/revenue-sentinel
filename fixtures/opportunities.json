@@ -1,22 +1,22 @@
 [
   {
-    "opportunity_id": "google-agentic-2026",
-    "title": "All Things Agentic Hackathon",
-    "source_url": "https://allthingsagentichackathon.devpost.com/",
+    "opportunity_id": "synthetic-agentic-challenge",
+    "title": "Open agentic automation challenge",
+    "source_url": "https://example.com/challenges/agentic-automation",
     "channel": "Hackathon",
     "potential_value_usd": 50000,
-    "deadline_iso": "2026-09-01T00:00:00Z",
+    "deadline_iso": "2099-09-01T00:00:00Z",
     "eligible": null,
     "buyer_verified": true,
     "payment_protected": null,
     "budget_clear": true,
     "scope_clear": true,
     "public_evidence": [
-      "https://allthingsagentichackathon.devpost.com/",
-      "https://allthingsagentichackathon.devpost.com/rules"
+      "https://example.com/challenges/agentic-automation",
+      "https://example.com/challenges/agentic-automation/rules"
     ],
     "external_actions": ["join contest", "deploy to Google Cloud", "publish repository", "submit Devpost entry"],
-    "notes": "Eligibility and account ownership require owner confirmation before submission."
+    "notes": "Synthetic open-case scenario for a deterministic judge demo. Eligibility and account ownership still require owner confirmation."
   },
   {
     "opportunity_id": "closed-contract",
@@ -54,7 +54,7 @@
     "source_url": "https://example.com/jobs/integration",
     "channel": "Contract",
     "potential_value_usd": 1500,
-    "deadline_iso": "2026-09-02T00:00:00Z",
+    "deadline_iso": "2099-09-02T00:00:00Z",
     "eligible": true,
     "buyer_verified": false,
     "payment_protected": false,

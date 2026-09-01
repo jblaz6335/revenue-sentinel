@@ -31,7 +31,7 @@ A local Uvicorn process served the FastAPI app on `127.0.0.1:8765`:
 - Firestore contains the matching digest-addressed audit document.
 - Cloud Logging records the revision-2 agent request with HTTP 200 and 12.05-second latency.
 - A three-region uptime check runs every 15 minutes against `/api/health` with a critical email alert policy.
-- Cloud Run is capped at one instance and uses the dedicated `revenue-sentinel-runtime` service account.
+- Cloud Run keeps one judging instance warm, caps at two instances, and uses the dedicated `revenue-sentinel-runtime` service account.
 
 ## Demo proof
 

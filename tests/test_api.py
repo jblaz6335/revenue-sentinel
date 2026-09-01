@@ -16,7 +16,7 @@ def valid_payload() -> dict[str, object]:
         "source_url": "https://example.com/open",
         "channel": "Contract",
         "potential_value_usd": 1000,
-        "deadline_iso": "2026-09-01T00:00:00Z",
+        "deadline_iso": "2099-09-01T00:00:00Z",
         "eligible": True,
         "buyer_verified": True,
         "payment_protected": True,

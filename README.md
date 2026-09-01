@@ -45,7 +45,7 @@ Required fields are `opportunity_id`, `title`, `source_url`, `channel`, and `pot
   "source_url": "https://example.com/contest",
   "channel": "Hackathon",
   "potential_value_usd": 10000,
-  "deadline_iso": "2026-09-01T00:00:00Z",
+  "deadline_iso": "2099-09-01T00:00:00Z",
   "eligible": null,
   "buyer_verified": true,
   "payment_protected": null,

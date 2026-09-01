@@ -15,8 +15,8 @@ gcloud run deploy $serviceName `
   --allow-unauthenticated `
   --service-account $runtimeServiceAccount `
   --set-env-vars "GOOGLE_CLOUD_PROJECT=$ProjectId,GOOGLE_CLOUD_LOCATION=global,GOOGLE_GENAI_USE_VERTEXAI=true,REVENUE_SENTINEL_LEDGER=firestore" `
-  --min-instances 0 `
-  --max-instances 1 `
+  --min-instances 1 `
+  --max-instances 2 `
   --concurrency 20 `
   --cpu 1 `
   --cpu-throttling `

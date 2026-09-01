@@ -14,7 +14,7 @@
 - [x] Use dedicated project `blaz-revenue-sentinel-2026` and confirm billing responsibility.
 - [x] Claim the USD 150 participant credit.
 - [x] Create the least-privilege `revenue-sentinel-runtime` service account.
-- [x] Enable a gross-spend budget and keep maximum instances at one.
+- [x] Enable a gross-spend budget, keep one judging instance warm, and cap the service at two instances.
 - [x] Deploy to Cloud Run.
 - [x] Verify active revision `revenue-sentinel-00002-t5j` and the `.run.app` endpoint.
 - [x] Verify one real ADK/Gemini 3.5 Flash invocation.
