@@ -46,4 +46,4 @@ Revenue Sentinel separates generative planning from facts that must not drift. G
 
 ## Verified deployment
 
-Revision `revenue-sentinel-00002-t5j` is live on Cloud Run. The public service, bounded Gemini 3.5 Flash tool call, matching Firestore document, Cloud log, one-instance ceiling, and three-region uptime check were verified on August 25, 2026. The demo video must show this evidence directly.
+Revision `revenue-sentinel-00001-gfm` is live in `us-west2` on Cloud Run. The public service, bounded Gemini 3.5 Flash tool call, matching Firestore document, Cloud log, one warm instance, two-instance ceiling, and three-region uptime check have been verified. The original `us-central1` service remains available as a regional backup.

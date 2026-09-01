@@ -18,7 +18,7 @@ Revenue Sentinel lets an agent research and prepare opportunities automatically 
 
 ## Project URL
 
-https://revenue-sentinel-867717531848.us-central1.run.app
+https://revenue-sentinel-867717531848.us-west2.run.app
 
 ## Repository
 
@@ -48,7 +48,7 @@ Each result includes evidence state, risk, bounded probability, expected value, 
 - FastAPI exposes health, single audit, batch audit, deterministic demo, and interactive API documentation.
 - Cloud Run hosts the service; Vertex AI supplies Gemini; Firestore stores digest-addressed audit evidence.
 - Pydantic rejects unknown fields and unsafe request shapes before they reach the engine.
-- Forty-five tests cover hard gates, channel probability caps, sorting, digests, tamper detection, API validation, local and Firestore persistence, the live-agent boundary, and the real ADK agent definition, with 95% combined measured coverage.
+- Forty-five tests cover hard gates, channel probability caps, sorting, digests, tamper detection, API validation, local and Firestore persistence, the live-agent boundary, and the real ADK agent definition, with 94% combined measured coverage.
 
 ## Google technology used
 
@@ -75,7 +75,7 @@ My first value model also overestimated contest odds by treating a hackathon lik
 - A tamper-evident local ledger and digest-addressed cloud persistence design.
 - Typed batch API, compact proof dashboard, Cloud Run configuration, architecture diagram, reproducible runbook, and automated tests.
 
-The current verified count is 45 passing tests at 95% combined measured coverage; re-run `VERIFICATION.md` checks immediately before submission.
+The current verified count is 45 passing tests at 94% combined measured coverage; re-run `VERIFICATION.md` checks immediately before submission.
 
 ## What I learned
 

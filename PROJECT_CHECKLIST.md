@@ -16,7 +16,7 @@
 - [x] Create the least-privilege `revenue-sentinel-runtime` service account.
 - [x] Enable a gross-spend budget, keep one judging instance warm, and cap the service at two instances.
 - [x] Deploy to Cloud Run.
-- [x] Verify active revision `revenue-sentinel-00002-t5j` and the `.run.app` endpoint.
+- [x] Verify active judging revision `revenue-sentinel-00001-gfm` in `us-west2` and the `.run.app` endpoint.
 - [x] Verify one real ADK/Gemini 3.5 Flash invocation.
 - [x] Verify one matching Firestore audit record and Cloud log entry.
 

@@ -72,7 +72,7 @@ Unknown facts remain `null`; they are never silently converted to approval.
 Deployment is intentionally explicit because it creates cloud resources and may incur charges. Review the project, choose a dedicated Google Cloud project, confirm billing, and then run:
 
 ```powershell
-./infra/deploy.ps1 -ProjectId YOUR_PROJECT_ID -Region us-central1
+./infra/deploy.ps1 -ProjectId YOUR_PROJECT_ID -Region us-west2
 ```
 
 The script enables Cloud Run, Cloud Build, Firestore, and Vertex AI, then performs a source deployment. For least privilege, create the `revenue-sentinel-runtime` service account and grant only the Firestore and Vertex permissions the runtime needs before production use. Set maximum instances and a budget alert before public traffic.

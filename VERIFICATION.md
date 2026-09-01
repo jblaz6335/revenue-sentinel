@@ -1,13 +1,13 @@
 # Verification record
 
-Verified locally and on Google Cloud on 2026-08-25 using Python 3.12.13.
+Verified locally and on Google Cloud through 2026-09-01 using Python 3.12.13.
 
 ## Automated checks
 
 - 45 tests passed.
-- Combined measured coverage across the ADK app, FastAPI service, and deterministic package: 95%.
+- Combined measured coverage across the ADK app, FastAPI service, and deterministic package: 94%.
 - Ruff lint passed.
-- Ruff formatting check passed for 28 files.
+- Ruff formatting check passed for 27 files.
 - The real Google ADK definition imports successfully as app `revenue_sentinel`, agent `revenue_sentinel`, model `gemini-3.5-flash`, with two tools.
 
 ## HTTP proof
@@ -21,17 +21,18 @@ A local Uvicorn process served the FastAPI app on `127.0.0.1:8765`:
 ## Google Cloud proof
 
 - Dedicated project: `blaz-revenue-sentinel-2026`.
-- Cloud Run service: `revenue-sentinel` in `us-central1`.
-- Active revision: `revenue-sentinel-00002-t5j`, serving 100% of traffic.
-- Public URL: `https://revenue-sentinel-867717531848.us-central1.run.app`.
+- Cloud Run service: `revenue-sentinel` in `us-west2`.
+- Active judging revision: `revenue-sentinel-00001-gfm`, serving 100% of traffic.
+- Public judging URL: `https://revenue-sentinel-867717531848.us-west2.run.app`.
 - `GET /api/health` returned HTTP 200 with `status: ok`.
 - `POST /api/demo` returned five cases and USD 515 total planning value.
 - `POST /api/agent/audit` returned HTTP 200 from Gemini 3.5 Flash and recorded the `audit_opportunity` tool call.
 - The live proof response contained evidence digest `645e79ed492bb72b9bae5bcfbe93107bfd7a266174983b89ecae2525ee7c8352`.
 - Firestore contains the matching digest-addressed audit document.
 - Cloud Logging records the revision-2 agent request with HTTP 200 and 12.05-second latency.
-- A three-region uptime check runs every 15 minutes against `/api/health` with a critical email alert policy.
+- A three-region uptime check runs every five minutes against the judging URL at `/api/health` with a critical email alert policy.
 - Cloud Run keeps one judging instance warm, caps at two instances, and uses the dedicated `revenue-sentinel-runtime` service account.
+- The `us-central1` deployment remains as a regional backup. Google Personalized Service Health confirmed that its September 1 intermittent 500 responses came from an active `us-central1-b` network incident rather than the application.
 
 ## Demo proof
 
