@@ -9,6 +9,7 @@ from revenue_sentinel.firestore_ledger import FirestoreLedger
 
 def test_firestore_ledger_append_and_list(monkeypatch) -> None:
     writes: list[tuple[str, dict[str, object]]] = []
+    client_calls: list[dict[str, object]] = []
 
     class Document:
         def __init__(self, digest: str) -> None:
@@ -30,11 +31,20 @@ def test_firestore_ledger_append_and_list(monkeypatch) -> None:
             return snapshots
 
     client = SimpleNamespace(collection=lambda _: Collection())
-    monkeypatch.setattr(firestore, "Client", lambda **_: client)
+
+    def create_client(**kwargs: object) -> object:
+        client_calls.append(kwargs)
+        return client
+
+    monkeypatch.setattr(firestore, "Client", create_client)
 
     ledger = FirestoreLedger(collection="audits")
+    assert client_calls == []
+
     result = ledger.append({"evidence_digest": "abc", "decision": "ready"})
 
+    assert len(client_calls) == 1
     assert writes[0][0] == "abc"
     assert result["record_hash"] == "abc"
     assert ledger.list_records() == [{"evidence_digest": "abc"}]
+    assert len(client_calls) == 1
