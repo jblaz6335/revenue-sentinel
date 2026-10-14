@@ -70,3 +70,14 @@ The hackathon channel cap is 1%, producing USD 500 expected value on the USD 50,
 The following remain explicitly unverified and must not be claimed:
 
 - judging result, prize, user, customer, contract, sale, or revenue.
+
+## Availability recheck — October 14, 2026
+
+Local verification on Python 3.12.15 with the committed `uv.lock` and development dependencies: 45 tests passed, combined measured coverage across `app`, `revenue_sentinel`, and `main` was 95%, and Ruff lint and formatting checks passed. The tests use mocked cloud integrations; this is not a new live Gemini or Firestore verification.
+
+Read-only GET requests to both recorded deployments returned HTTP 404:
+
+- `https://revenue-sentinel-867717531848.us-west2.run.app/api/health`
+- `https://revenue-sentinel-867717531848.us-central1.run.app/api/health`
+
+The historical deployment and submission records above remain dated evidence. The public demo is currently unavailable at these URLs. Use the local fixture demo; this recheck did not redeploy resources or invoke a paid model call.

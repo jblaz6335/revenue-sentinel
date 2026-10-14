@@ -1,0 +1,35 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      REVENUE_SENTINEL_LEDGER: memory
+      GOOGLE_GENAI_USE_VERTEXAI: "FALSE"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install locked environment manager
+        run: python -m pip install uv==0.13.1
+      - name: Install locked project and verification tools
+        run: uv sync --frozen --extra dev
+      - name: Check formatting
+        run: uv run --frozen --extra dev ruff format --check .
+      - name: Lint
+        run: uv run --frozen --extra dev ruff check .
+      - name: Test without cloud credentials
+        run: uv run --frozen --extra dev pytest --cov=app --cov=revenue_sentinel --cov=main --cov-report=term-missing
+      - name: Run offline fixture demo
+        run: uv run --frozen --extra dev revenue-sentinel fixtures/opportunities.json --pretty
+      - name: Check dependency consistency
+        run: uv pip check

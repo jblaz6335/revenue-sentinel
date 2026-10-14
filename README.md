@@ -4,6 +4,14 @@ Revenue Sentinel is an autonomous, evidence-first opportunity auditor built for 
 
 The core refuses to treat a lead as revenue. It independently represents deadline, eligibility, source quality, buyer verification, payment protection, scope clarity, and budget clarity; calculates a bounded expected value; produces a SHA-256 evidence digest; and preserves explicit owner gates for submissions, messages, payments, deployments, and account changes.
 
+## Project evidence and demo status
+
+![Revenue Sentinel architecture](assets/architecture.png)
+
+[Demo video](https://youtu.be/TSp3dc-k1Ys) · [Architecture](ARCHITECTURE.md) · [Verification record](VERIFICATION.md) · [Submission](https://devpost.com/software/revenue-sentinel-25chxk)
+
+The dated verification record documents a September 1, 2026 Cloud Run deployment, Gemini tool call, and Firestore write. A fresh check on October 14, 2026 returned HTTP 404 from `/api/health` on both recorded regional URLs. **The hosted demo is currently unavailable at those URLs; use the credential-free local demo below.** Historical deployment evidence is not a claim of current availability.
+
 ## Why it exists
 
 Revenue work is usually a messy multi-step chore: find leads, verify they are still open, inspect rules, check eligibility, reject scams and dust-value work, compare expected value, prepare evidence, and decide what needs a human. Generic chat agents can skip gates or invent certainty. Revenue Sentinel makes the safety and evidence layer deterministic, then gives Google ADK and Gemini a small set of auditable tools.
@@ -89,13 +97,9 @@ What the repository proves locally:
 - a real Google ADK agent definition using Gemini 3.5 Flash;
 - Cloud Run, Vertex AI, and Firestore deployment configuration.
 
-What it does **not** prove until separately verified:
+Historical external verification is documented in [VERIFICATION.md](VERIFICATION.md), including cloud execution and public submission. These dated records do not establish current service availability. Current public health checks are recorded above.
 
-- a live Google Cloud deployment or Cloud Console evidence;
-- a successful Gemini/Vertex model call;
-- a Devpost registration or submission;
-- production use, customers, contracts, sales, prizes, or revenue;
-- permission to message, submit, spend, sign, or mutate any external account.
+Neither the local demo nor those records establish a prize, production adoption, customers, sales, or revenue. External messages, submissions, payments, deployments, and account changes remain subject to owner authorization.
 
 ## License
 
